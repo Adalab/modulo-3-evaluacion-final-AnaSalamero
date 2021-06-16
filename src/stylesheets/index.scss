@@ -65,3 +65,35 @@
     color: yellow;
   }
 }
+
+.characterdetaillink {
+  color: white;
+  font-size: 14px;
+}
+
+.characterdetail_title {
+  color: #46b0c8;
+  margin: 15px;
+}
+
+.characterdetail_section {
+  background-color: #46b0c8;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 440px;
+  margin: 30px;
+
+  &-img {
+    width: 100%;
+  }
+
+  &-list {
+    color: black;
+    font-size: 18px;
+  }
+
+  &-listele {
+    font-weight: bolder;
+    margin-right: 10px;
+  }
+}
