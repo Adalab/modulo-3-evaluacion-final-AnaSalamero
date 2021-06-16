@@ -4,16 +4,20 @@ const CharacterList = (props) => {
   let render;
 
   const userElements = props.characters.map((character) => {
-    return <CharacterCard key={character.id} character={character} />;
+    return (
+      <li key={character.id}>
+        <CharacterCard character={character} />
+      </li>
+    );
   });
 
   if (props.characters.length > 0) {
-    render = userElements;
+    render = <ul className="maincontainer_list">{userElements}</ul>;
   } else {
-    render = <p>0 characters found</p>;
+    render = <p className="paragrpahnotfound">0 characters found</p>;
   }
 
-  return <section>{render}</section>;
+  return render;
 };
 
 export default CharacterList;

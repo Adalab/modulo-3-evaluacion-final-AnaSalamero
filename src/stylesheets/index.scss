@@ -3,9 +3,10 @@
 .body {
   background-color: black;
   color: white;
+  font-family: sans-serif;
 }
 
-.mainContainer {
+.maincontainer {
   background-color: black;
   width: 100%;
   display: flex;
@@ -14,15 +15,53 @@
   align-items: center;
   text-align: center;
 
-  &_section1-title {
-    display: none;
-  }
+  &_section1 {
+    margin: 20px;
 
-  &_section1-logo {
-    width: 400px;
+    &-title {
+      display: none;
+    }
+
+    &-logo {
+      width: 400px;
+    }
   }
 
   &_form {
-    font-size: 18px;
+    margin: 10px;
+
+    &-input {
+      font-size: 18px;
+      padding: 3px;
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+
+.charactercard {
+  background-color: #46b0c8;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 220px;
+  margin: 5px;
+
+  &_img {
+    width: 200px;
+  }
+
+  &_name {
+    border-bottom: 1px solid black;
+    padding: 5px 0px;
+    color: black;
+  }
+
+  &_class {
+    padding: 5px 0px;
+    color: yellow;
   }
 }

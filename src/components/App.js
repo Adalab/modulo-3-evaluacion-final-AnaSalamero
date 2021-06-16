@@ -68,13 +68,13 @@ function App() {
 
   return (
     <>
-      <section>
-        <h1 className="mainContainer_section1-title">Rick and Morty</h1>
+      <section className="maincontainer_section1">
+        <h1 className="maincontainer_section1-title">Rick and Morty</h1>
         <img
           src={logo}
           alt="logo"
           title="Rick and Morty Character Searcher"
-          className="mainContainer_section1-logo"
+          className="maincontainer_section1-logo"
         />
       </section>
       <Switch>
