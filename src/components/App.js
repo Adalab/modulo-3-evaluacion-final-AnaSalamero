@@ -5,13 +5,14 @@ import { Route, Switch } from 'react-router';
 import CharacterList from './CharacterList';
 import CharacterDetails from './CharacterDetails';
 import FilterName from './FilterName';
+import logo from '../images/logo.png';
 
 //services
 import getApiData from '../services/api';
 import ls from '../services/local-storage';
 
 //styles
-import '../stylesheets/App.scss';
+import '../stylesheets/index.scss';
 
 function App() {
   const [characters, setCharacters] = useState(ls.get('characters', []));
@@ -67,7 +68,15 @@ function App() {
 
   return (
     <>
-      <h1>Rick and Morty</h1>
+      <section>
+        <h1 className="mainContainer_section1-title">Rick and Morty</h1>
+        <img
+          src={logo}
+          alt="logo"
+          title="Rick and Morty Character Searcher"
+          className="mainContainer_section1-logo"
+        />
+      </section>
       <Switch>
         <Route exact path="/">
           <FilterName handleFilter={handleFilter} filterbyName={filterbyName} />
