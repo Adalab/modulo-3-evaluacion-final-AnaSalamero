@@ -64,6 +64,10 @@
     padding: 5px 0px;
     color: yellow;
   }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .characterdetaillink {
