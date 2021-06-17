@@ -4,6 +4,7 @@
   background-color: black;
   color: white;
   font-family: sans-serif;
+  margin: auto;
 }
 
 .maincontainer {
@@ -37,9 +38,22 @@
   }
 
   &_list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+    }
+
+    @media all and (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+    }
   }
 
   &_label {
@@ -70,7 +84,10 @@
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    @media all and (min-width: 768px) {
+      transform: scale(1.1);
+    }
   }
 }
 

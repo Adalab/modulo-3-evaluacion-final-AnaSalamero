@@ -8,7 +8,6 @@ const FilterSpecies = (props) => {
       value: ev.target.value,
       key: 'class',
     });
-    console.log(ev.target.value);
   };
 
   return (
