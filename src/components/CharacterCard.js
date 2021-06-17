@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const CharacterCard = (props) => {
   return (
@@ -15,6 +16,18 @@ const CharacterCard = (props) => {
       </article>
     </Link>
   );
+};
+
+CharacterCard.propTypes = {
+  character: PropTypes.exact({
+    name: PropTypes.string.isRequired,
+    class: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    origin: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    episodes: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
 };
 
 export default CharacterCard;
