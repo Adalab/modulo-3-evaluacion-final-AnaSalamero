@@ -22,7 +22,6 @@ HTML, CSS, JS, React
 
 ## Components Hierarchy
 
-...
 App.js
 ├─ CharacterList.js
 | └─ CharacterCard.js
@@ -32,9 +31,6 @@ App.js
 | └─ FilterSpecie.js
 └─
 
-```
-
 Developed by [Ana Salamero](https://github.com/AnaSalamero) for the [Adalab Bootcamp](https://adalab.es/).
 
 Suggestions greatly appreciated!
-```
