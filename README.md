@@ -25,12 +25,13 @@ HTML, CSS, JS, React
 #### Components Hierarchy
 
 App.js
+
 - CharacterList.js
   - CharacterCard.js
 - CharacterDetails.js
 - Filters.js
   - FilterName.js
-  - FilterSpecie.js
+  - FilterSpecies.js
 
 Developed by [Ana Salamero](https://github.com/AnaSalamero) for the [Adalab Bootcamp](https://adalab.es/).
 

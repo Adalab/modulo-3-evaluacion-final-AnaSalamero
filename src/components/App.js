@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router';
 //components
 import CharacterList from './CharacterList';
 import CharacterDetails from './CharacterDetails';
-import FilterName from './FilterName';
+import Filters from './Filters';
 import logo from '../images/logo.png';
 
 //services
@@ -17,6 +17,9 @@ import '../stylesheets/index.scss';
 function App() {
   const [characters, setCharacters] = useState(ls.get('characters', []));
   const [filterbyName, setFilterbyName] = useState(ls.get('filterbyName', ''));
+  const [filterbySpecies, setFilterbySpecies] = useState(
+    ls.get('filterbySpecies', '')
+  );
 
   //effects
   useEffect(() => {
@@ -38,17 +41,29 @@ function App() {
     ls.set('filterbyName', filterbyName);
   }, [filterbyName]);
 
+  useEffect(() => {
+    ls.set('filterbySpecies', filterbySpecies);
+  }, [filterbySpecies]);
+
   // event handlers
   const handleFilter = (data) => {
     if (data.key === 'name') {
       setFilterbyName(data.value);
+    } else if (data.key === 'class') {
+      setFilterbySpecies(data.value);
     }
   };
 
   //render
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(filterbyName.toLowerCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterbyName.toLowerCase());
+    })
+    .filter((character) => {
+      return filterbySpecies === ''
+        ? true
+        : character.class === filterbySpecies;
+    });
 
   const renderCharacterDetail = (props) => {
     const characterId = parseInt(props.match.params.characterId);
@@ -79,7 +94,11 @@ function App() {
       </section>
       <Switch>
         <Route exact path="/">
-          <FilterName handleFilter={handleFilter} filterbyName={filterbyName} />
+          <Filters
+            handleFilter={handleFilter}
+            filterbyName={filterbyName}
+            filterbySpecies={filterbySpecies}
+          />
           <CharacterList characters={filteredCharacters} />
         </Route>
         <Route path="/character/:characterId" render={renderCharacterDetail} />
