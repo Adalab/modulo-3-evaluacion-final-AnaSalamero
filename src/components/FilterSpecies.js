@@ -13,7 +13,9 @@ const FilterSpecies = (props) => {
 
   return (
     <form className="maincontainer_form" onSubmit={handleSubmit}>
-      <label htmlFor="class">Species:</label>
+      <label className="maincontainer_label" htmlFor="class">
+        Species:
+      </label>
       <select
         name="class"
         id="class"

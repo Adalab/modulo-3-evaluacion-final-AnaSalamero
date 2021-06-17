@@ -41,6 +41,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }
+
+  &_label {
+    padding-right: 25px;
+  }
 }
 
 .charactercard {
