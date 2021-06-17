@@ -1,6 +1,8 @@
 ### Final-term evaluation: Rick and Morty searcher
 
-## Goal:
+![Rick and Morty searcher](https://user-images.githubusercontent.com/79455146/122356626-431ad800-cf53-11eb-8b57-8678fe8a2c20.png)
+
+#### Goal:
 
 Develop a basic searcher using React:
 
@@ -16,20 +18,19 @@ Develop a basic searcher using React:
 - array methods (map, filter)
 - dynamic routing
 
-## Stack:
+#### Stack:
 
 HTML, CSS, JS, React
 
-## Components Hierarchy
+#### Components Hierarchy
 
 App.js
-├─ CharacterList.js
-| └─ CharacterCard.js
-├─ CharacterDetails.js
-├─ Filters.js
-| |─ FilterName.js
-| └─ FilterSpecie.js
-└─
+- CharacterList.js
+  - CharacterCard.js
+- CharacterDetails.js
+- Filters.js
+  - FilterName.js
+  - FilterSpecie.js
 
 Developed by [Ana Salamero](https://github.com/AnaSalamero) for the [Adalab Bootcamp](https://adalab.es/).
 
