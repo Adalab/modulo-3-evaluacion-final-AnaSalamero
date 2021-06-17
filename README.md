@@ -4,22 +4,37 @@
 
 Develop a basic searcher using React:
 
-- handle API data
+- API requests
 - localstorage
 - rendering lists
 - forms
-- functional components
+- function components
 - props & lifting
 - state & events
 - hooks
 - propTypes
 - array methods (map, filter)
-- dinamic routes
+- dynamic routing
 
 ## Stack:
 
 HTML, CSS, JS, React
 
+## Components Hierarchy
+
+...
+App.js
+├─ CharacterList.js
+| └─ CharacterCard.js
+├─ CharacterDetails.js
+├─ Filters.js
+| |─ FilterName.js
+| └─ FilterSpecie.js
+└─
+
+```
+
 Developed by [Ana Salamero](https://github.com/AnaSalamero) for the [Adalab Bootcamp](https://adalab.es/).
 
 Suggestions greatly appreciated!
+```
